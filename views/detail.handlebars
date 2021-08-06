@@ -1,0 +1,12 @@
+<section id="gigs" class="container">
+     {{#if gig}}
+      <div class="gig">
+      <h3>{{gig.firstname}}</h3>
+      <h3>{{gig.lastname}}</h3>
+      <p>{{gig.description}}</p>
+    </div>
+    {{else}}
+      <p>No user available</p>
+    {{/if}}
+    
+  </section>

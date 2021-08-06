@@ -1,0 +1,39 @@
+<section id="add" class="container">
+    <div class="form-wrap">
+      <h1>Edit User</h1>
+      <p>Your  email will be shared with registered users </p>
+      
+      {{#each errors}}
+        <div class="error">
+          <p>{{text}}</p>
+        </div>
+      {{/each}}
+      <form action="/gigs/{{gig.id}}/edit" method="POST">
+        <div class="input-group">
+          <label for="title">Firsname</label>
+          <input type="text" name="firstname" id="title" class="input-box" placeholder=""
+            maxlength="100" value={{firstname}}>
+        </div>
+        <div class="input-group">
+          <label for="title">Lastname</label>
+          <input type="text" name="lastname" id="title" class="input-box" placeholder=""
+            maxlength="100" value={{lastname}}>
+        </div>
+        <div class="input-group">
+          <label for="imgurl">Img url</label>
+          <input type="text" name="imgurl" id="technologies" class="input-box" placeholder=""
+          maxlength="200" value={{imgurl}}>
+        </div>
+        <div class="input-group">
+          <label for="description">Description</label>
+          <textarea name="description" id="description" class="input-box" placeholder="Describe the details of the gig"
+            rows="10">{{description}}</textarea>
+        </div>
+        <div class="input-group">
+          <label for="budget">Email</label>
+          <input type="email" name="email" id="contactemail" class="input-box" placeholder="Enter an email" value={{email}}>
+        </div>
+        <input type="submit" value="Edit User" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>

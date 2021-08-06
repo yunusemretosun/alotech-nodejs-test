@@ -1,0 +1,26 @@
+<section id="gigs" class="container">
+    <h1>All Users</h1>
+
+    {{#each gigs}}
+      <div class="gig">
+      <h3>{{username}}</h3>
+      <p>{{description}}</p>
+      <ul>
+        <li>firstname: {{firstname}}<br>
+        lastname: {{lastname}}
+        </li>
+  
+        
+        <form action="/gigs/{{id}}/delete" method="GET"><li><input type="submit" value="Delete" class="btn btn-reverse"></li></form>
+        <form action="/gigs/{{id}}/detail" method="GET"><li><input type="submit" value="Detay" class="btn btn-reverse"></li></form>
+        <form action="/gigs/{{id}}/edit" method="GET"><li><input type="submit" value="Edit" class="btn btn-reverse"></li></form>
+      </ul>
+      <div class="tech">
+        <small>birthdate: <span>{{birthdate}}</span></small>
+      </div>
+    </div>
+    {{else}}
+      <p>No user available</p>
+    {{/each}}
+    
+  </section>
